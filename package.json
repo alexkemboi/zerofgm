@@ -1,0 +1,26 @@
+{
+  "name": "nofgm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexkemboi/zerofgm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexkemboi/zerofgm/issues"
+  },
+  "homepage": "https://github.com/alexkemboi/zerofgm#readme",
+  "dependencies": {
+    "africastalking": "^0.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ngrok": "^4.3.3",
+    "ussd-builder": "^1.2.5"
+  }
+}
