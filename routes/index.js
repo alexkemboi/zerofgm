@@ -5,7 +5,7 @@ let menu = new UssdMenu();
 let data = {};
 
 const credentials = {
-  apiKey: "b4b2da2e9c756552274d8861fa0b38becb4da795707cc46709c137d9b6e867a5",
+  apiKey: "0488aa0bdcd9828e516f1a30811ba9dbda37236b878e3a2050f0b2201476956c",
   username: "sandbox",
 };
 
@@ -33,7 +33,10 @@ const ussd = () => {
   menu.state("userMenu", {
     run: () => {
       menu.con(
-        "Welcome: " + "\n1. Report fgm case" + "\n2. Get information" + "\n3. Exit"
+        "Welcome: " +
+          "\n1. Report fgm case" +
+          "\n2. Get information" +
+          "\n3. Exit"
       );
     },
     next: {
@@ -102,8 +105,8 @@ const ussd = () => {
     run: () => {
       menu.con(
         "Availabe hospital" +
-          "\n1. jkuat hospital (Feb 17, 2023)" +
-          "\n2. Thika hospital(Feb 18, 2023)"
+          "\n1. mtrh hospital (Feb 17, 2023)" +
+          "\n2. mediheal hospital(Feb 18, 2023)"
       );
     },
     next: {
@@ -115,7 +118,7 @@ const ussd = () => {
     run: async () => {
       const options = {
         to: menu.args.phoneNumber,
-        message: `Greetings your appointment is to Jkuat hospital is on Feb 17, 2023`,
+        message: `Greetings your appointment is to mtrh hospital is on Feb 17, 2023`,
       };
 
       await sms
@@ -133,7 +136,7 @@ const ussd = () => {
   menu.state("appointment.emergence", {
     run: () => {
       menu.con(
-        "Availabe hospital" + "\n1. jkuat hospital" + "\n2. Thika hospital"
+        "Availabe hospital" + "\n1. mtrh hospital" + "\n2. mediheal hospital"
       );
     },
     next: {
@@ -145,7 +148,7 @@ const ussd = () => {
     run: async () => {
       const options = {
         to: menu.args.phoneNumber,
-        message: `Greetings you will be contacted  zerofgm hospital`,
+        message: `Greetings you will be contacted zerofgm hospital`,
       };
 
       await sms
@@ -165,7 +168,7 @@ const ussd = () => {
       const options = {
         to: menu.args.phoneNumber,
         message:
-          "Date: Feb 1, 2023, \n Drug used: Panadol, \n B.p: 70, \n Allergies: penicillin, \n Hospital: Jkuat \n \n Date: Feb 6, 2023, \n Drug used: Panadol, \n B.p: 70, \n Allergies: penicillin, \n Hospital: Thika",
+          "Date: Feb 1, 2023, \n Location: pokot, \n Hospital:West Pokot referral hospital ",
       };
 
       await sms
